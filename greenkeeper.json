@@ -1,0 +1,13 @@
+{
+  "groups": {
+    "default": {
+      "packages": [
+        "package.json",
+        "packages/commitlint-config/package.json",
+        "packages/npmpackagejsonlint-config/package.json",
+        "packages/prettier-config/package.json",
+        "packages/tslint-config/package.json"
+      ]
+    }
+  }
+}
