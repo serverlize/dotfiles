@@ -1,0 +1,3 @@
+linters:
+  "package.json":
+    - "npmPkgJsonLint -c public.js"

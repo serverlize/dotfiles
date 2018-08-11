@@ -1,7 +1,7 @@
 {
-  "name": "serverlize",
-  "version": "1.0.0",
-  "description": "Serverlize - Supercharge your Serverless development experience!",
+  "name": "@serverlize/dotfiles",
+  "version": "0.0.0",
+  "description": "Shareable configs for tooling",
   "license": "MIT",
   "private": true,
   "author": {
@@ -23,10 +23,7 @@
   "scripts": {
     "precommit": "lerna run --concurrency 10 --stream precommit",
     "commitmsg": "commitlint -E GIT_PARAMS",
-    "commit": "$(yarn bin)/git-cz",
-    "lint": "lerna run --concurrency 10 --stream lint",
-    "build": "lerna run --concurrency 10 --stream build",
-    "test": "lerna run --concurrency 10 --stream test"
+    "commit": "$(yarn bin)/git-cz"
   },
   "devDependencies": {
     "@commitlint/cli": "^7.0.0",
@@ -34,9 +31,7 @@
     "commitizen": "^2.10.1",
     "cz-conventional-changelog": "^2.1.0",
     "husky": "^0.14.3",
-    "lerna": "^2.11.0",
-    "ts-node": "^7.0.0",
-    "typescript": "^2.9.2"
+    "lerna": "^2.11.0"
   },
   "workspaces": {
     "packages": [
