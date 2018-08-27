@@ -16,7 +16,6 @@ module.exports = {
      * Variables
      */
     'no-shadowed-variable'            : true,
-    'no-unused-variable'              : true,
     'no-use-before-declare'           : true,
 
     /**
