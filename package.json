@@ -27,7 +27,7 @@
   },
   "devDependencies": {
     "@commitlint/cli": "^7.1.1",
-    "@commitlint/config-conventional": "^7.0.1",
+    "@commitlint/config-conventional": "^7.1.1",
     "@commitlint/prompt": "^7.0.0",
     "commitizen": "^2.10.1",
     "husky": "^0.14.3",
