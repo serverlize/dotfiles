@@ -24,7 +24,7 @@
     "precommit": "lerna run --concurrency 10 --stream precommit",
     "commitmsg": "commitlint -E GIT_PARAMS",
     "commit": "$(yarn bin)/git-cz",
-    "release": "lerna exec --concurrency 1 --stream release"
+    "release": "lerna run release"
   },
   "devDependencies": {
     "@commitlint/cli": "^7.1.1",
