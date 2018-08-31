@@ -23,7 +23,8 @@
   "scripts": {
     "precommit": "lerna run --concurrency 10 --stream precommit",
     "commitmsg": "commitlint -E GIT_PARAMS",
-    "commit": "$(yarn bin)/git-cz"
+    "commit": "$(yarn bin)/git-cz",
+    "publish": "lerna exec --concurrency 1 --stream publish"
   },
   "devDependencies": {
     "@commitlint/cli": "^7.1.1",

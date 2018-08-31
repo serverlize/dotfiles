@@ -28,6 +28,7 @@ notifications:
 env:
   global:
     - secure: NvyHrFnxSvZxzARD1C0Vb4a4OP2hkIYnASyENkxfJbjoOcQixDr+13boWw/w2mlULJmdsvRxDYsiSPvk8Wt0zOnMVgF+M5EiDMGtkhiaFRXzWmXjQ3Hh+Wh14YBKnv/fdlZx1XMCcRuiFKg/d1e/x2B/kJD++U0HuY97TQSSQ1cX8sCfNl1wr/bNUvsmxNfOXNYYrpr72jNVkIa+xXAiqO/yY69N99N+OdpZTLUfXOug0RX7ga9WB+iwAb1IMaHmLIns5TLynLilmm8Lgu28gHdWNQMqD7Gqy7M1SKYnY7yRfB1rJ5ulwstpZU24kiUyaRMNMIilN5ikduAbsnHriJqEUCXvcXJbQRuKL+RLoAw6feMDPSCiXZNtUJ8iJn1PjbmkPYb6zyF7IwQoP6r+oZ378ZtYQNLEln8IF1ww9Lv/hkp+8JRqzdOogzY8mg84iKiJTStaNuWwcQDpsG/WX62ewaq+5lod5Iv2n33aCcC2e+uWjXbkeocDnSU19IYLogl57Ph1pcNG7jIJQzU9KFPEg7urlimp0GWNOYJ1rKNDl4nvrnddAnD5cViPKAZte7WCbO+1kZ8TxV+34YUQ47Q7gfb/QgRXnyfsvmQHth1nYDLSxk1UNolu6BLg+kfzyPEmYd1I4E+JOEIv2G5k26LgCp6gi1SHVJVN2EUZmP4=
+    - secure: GV53OZmgj91eB4FdHxOAq1AjHuk8wudRH4KLJQtEjRe/TXUwy5+8XER7vLj/mhjRng3L93kpMFQZCXxO0/alvTH5N8t6yiWoWgtIKw9CtmHtoZkPlr98tk/yMHGhyFTtXLh++1A60GY4zf6WcHdhgLgn6bQ5+zL21+uucdv6rQU7HLgDAU8hN66sSEQhVQB3OZ2DSdkU/K1zXNRwRp5uczQFrLv9uoJ2tJJ/veDOJ+GuCCXtWJp+zD5Vm6gd2/RHeZHwaKW/Am7MZdETXxjH2TZ/i6G3UwPYVG0a8017CG0OfAxVaQvJ0gC3Dc/5OYBxfx+yJPDaQi1QEknDttybdS1MAsD/9VuiI8cETXDSBWsyG+KUgvcHDi92U8aTm8r7lZcgBchedldSIfBzBRUaHNvbIysRG6wOH8nFupzRolNt6VTK0SIrsYUv2lCarScEc7My8c2BfUTUtlS/DOI4D0RehQYZM3vJu86LNV29dEqZ4nV7+ZGrZbYETjNZp1IN0mj8tGX/1zrAyTxx/K1umUPRcXoQeMQyRed4Xd3tvSuCZm+b30TuAnvqMPXRk8SKmk6TS31V1a50nx9jZ4S1C/tgF71iAJda2+IKdVEnkr+nw/e59fmdQoIXYkRRBpRZ/QpcCG9S3q2uHiFG/pIFMyssS45gif/mDIIPiqjKOEc=
     - export GK_LOCK_YARN_OPTS="--ignore-workspace-root-check"
     - export GK_LOCK_COMMIT_NAME="greenkeeper[bot]"
     - export GK_LOCK_COMMIT_EMAIL="greenkeeper[bot]@users.noreply.github.com"
@@ -47,3 +48,7 @@ jobs:
           done;
         - ./cc-test-reporter sum-coverage -o coverage/coverage.total.json coverage/coverage.*.json;
         - ./cc-test-reporter upload-coverage -i coverage/coverage.total.json;
+    - stage: release
+      if: branch = master
+      after_success:
+        - yarn publish
