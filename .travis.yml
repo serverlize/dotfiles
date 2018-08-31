@@ -51,4 +51,4 @@ jobs:
     - stage: release
       if: branch = master
       after_success:
-        - yarn publish
+        - yarn release
