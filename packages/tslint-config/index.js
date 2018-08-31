@@ -1,6 +1,6 @@
 module.exports = {
   extends: [
-    'tslint-eslint-rules'
+    'tslint-config-prettier'
   ],
   rules: {
 
