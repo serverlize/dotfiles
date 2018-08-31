@@ -21,7 +21,7 @@
   },
   "scripts": {
     "precommit": "lint-staged",
-    "publish": "semantic-release -e semantic-release-monorepo"
+    "release": "semantic-release -e semantic-release-monorepo"
   },
   "peerDependencies": {
     "@serverlize/npmpackagejsonlint-public-config": ">=0.0.0",

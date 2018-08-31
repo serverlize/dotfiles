@@ -21,7 +21,7 @@
   },
   "scripts": {
     "precommit": "lint-staged",
-    "publish": "semantic-release -e semantic-release-monorepo"
+    "release": "semantic-release -e semantic-release-monorepo"
   },
   "peerDependencies": {
     "tslint": ">=5.6.0",

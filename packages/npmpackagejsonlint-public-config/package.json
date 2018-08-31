@@ -21,7 +21,7 @@
   },
   "scripts": {
     "precommit": "lint-staged",
-    "publish": "semantic-release -e semantic-release-monorepo"
+    "release": "semantic-release -e semantic-release-monorepo"
   },
   "peerDependencies": {
     "npm-package-json-lint": ">=3.3.0"
