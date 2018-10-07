@@ -22,7 +22,8 @@
   },
   "scripts": {
     "commit": "$(yarn bin)/git-cz",
-    "release": "lerna run release"
+    "release": "lerna run release",
+    "test": "echo 'No tests'"
   },
   "devDependencies": {
     "@commitlint/cli": "^7.1.1",

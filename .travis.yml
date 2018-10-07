@@ -10,7 +10,7 @@ before_install:
   - npm i -g yarn
 
 script:
-  - yarn precommit
+  - yarn test
 
 notifications:
   webhooks:
