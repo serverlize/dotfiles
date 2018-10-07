@@ -21,8 +21,6 @@
     "yarn": ">=1.3.0"
   },
   "scripts": {
-    "precommit": "lerna run --concurrency 10 --stream precommit",
-    "commitmsg": "commitlint -E GIT_PARAMS",
     "commit": "$(yarn bin)/git-cz",
     "release": "lerna run release"
   },
