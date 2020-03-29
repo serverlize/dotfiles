@@ -32,7 +32,7 @@
     "@semantic-release/changelog": "^3.0.0",
     "@semantic-release/git": "^7.0.3",
     "@serverlize/npmpackagejsonlint-public-config": "^0.0.0",
-    "lint-staged": "8.0.5",
+    "lint-staged": "10.0.10",
     "npm-package-json-lint": "^3.3.0",
     "semantic-release": "^15.9.12",
     "semantic-release-monorepo": "^6.0.3"
