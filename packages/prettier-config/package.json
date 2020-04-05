@@ -24,7 +24,7 @@
     "release": "semantic-release -e semantic-release-monorepo"
   },
   "peerDependencies": {
-    "prettier": ">=1.14.2"
+    "prettier": ">=2.0.3"
   },
   "dependencies": {},
   "devDependencies": {
